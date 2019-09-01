@@ -495,7 +495,7 @@ table {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 90px;
-  padding: 0 8px 1vh 8px;
+  padding: 0 8px 0.5vh 8px;
   position: absolute;
   top: 0.55vh;
   right: 0;
@@ -654,6 +654,12 @@ table {
   }
   .page-lang__lang-sign {
     font-size: 16px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-lang__item {
+    margin-bottom: 11px;
   }
 }
 
@@ -917,6 +923,9 @@ table {
   .image-layout {
     right: 47%;
   }
+  .image-layout__fixed-img {
+    top: 30px;
+  }
   .sign-up {
     margin-top: 8%;
   }
@@ -941,6 +950,9 @@ table {
   .image-layout {
     width: 100vw;
     right: 0;
+  }
+  .image-layout__fixed-img {
+    top: 0;
   }
   .image-layout__parallax-img {
     width: 100%;
@@ -996,6 +1008,7 @@ table {
     background-size: contain;
   }
   .image-layout__fixed-img {
+    top: 35px;
     background-position: 35% -25%;
     background-size: 115%;
   }
