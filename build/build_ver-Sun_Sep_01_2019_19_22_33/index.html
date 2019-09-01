@@ -37,38 +37,41 @@
     <body class="body">
 
         <header class="header">
-            <div class="header__logo"></div>
-            <section class="header__jackpot jackpot">
-                <span class="jackpot__count"><span class="jackpot__count-number" id="jackpot-count">780 9908</span><span class="jackpot__euro-sign">&#8364</span></span>
-                <span class="jackpot__sign">jackpot</span>
-            </section>
-            <div class="header__page-lang page-lang" id="page-lang">
-                <div class="page-lang__checked-lang">
-                    <img src="./static/img/general/kz-flag.jpg" alt="flag-img" class="page-lang__flag">
+            <div class="header__container">
+
+                <div class="header__logo"></div>
+                <section class="header__jackpot jackpot">
+                    <span class="jackpot__count"><span class="jackpot__count-number" id="jackpot-count">780 9908</span><span class="jackpot__euro-sign">&#8364</span></span>
+                    <span class="jackpot__sign">jackpot</span>
+                </section>
+                <div class="header__page-lang page-lang" id="page-lang">
+                    <div class="page-lang__checked-lang">
+                        <img src="./static/img/general/kz-flag.jpg" alt="check-lang-image" class="page-lang__flag">
+                    </div>
+                    <span class="page-lang__toggle-button" id="page-lang-toggle-button"></span>
+                    <ul class="page-lang__list" id="page-lang-list">
+                        <li class="page-lang__item">
+                            <img src="./static/img/general/ru-flag.jpg" alt="image" class="page-lang__checked-lang page-lang__checked-lang--1">
+                            <span class="page-lang__lang-sign">ru</span>
+                        </li>
+                        <li class="page-lang__item">
+                            <img src="./static/img/general/en-flag.jpg" alt="image" class="page-lang__checked-lang page-lang__checked-lang--2">
+                            <span class="page-lang__lang-sign">en</span>
+                        </li>
+                        <li class="page-lang__item">
+                            <img src="./static/img/general/ua-flag.jpg" alt="image" class="page-lang__checked-lang page-lang__checked-lang--3">
+                            <span class="page-lang__lang-sign">ua</span>
+                        </li>
+                        <li class="page-lang__item">
+                            <img src="./static/img/general/tr-flag.jpg" alt="image" class="page-lang__checked-lang page-lang__checked-lang--4">
+                            <span class="page-lang__lang-sign">tr</span>
+                        </li>
+                        <li class="page-lang__item">
+                            <img src="./static/img/general/de-flag.jpg" alt="image" class="page-lang__checked-lang page-lang__checked-lang--5">
+                            <span class="page-lang__lang-sign">de</span>
+                        </li>
+                    </ul>
                 </div>
-                <span class="page-lang__toggle-button" id="page-lang-toggle-button"></span>
-                <ul class="page-lang__list" id="page-lang-list">
-                    <li class="page-lang__item">
-                        <img src="./static/img/general/ru-flag.jpg" alt="flag-img" class="page-lang__flag">
-                        <span class="page-lang__lang-sign">ru</span>
-                    </li>
-                    <li class="page-lang__item">
-                        <img src="./static/img/general/en-flag.jpg" alt="flag-img" class="page-lang__flag">
-                        <span class="page-lang__lang-sign">en</span>
-                    </li>
-                    <li class="page-lang__item">
-                        <img src="./static/img/general/ua-flag.jpg" alt="flag-img" class="page-lang__flag">
-                        <span class="page-lang__lang-sign">ua</span>
-                    </li>
-                    <li class="page-lang__item">
-                        <img src="./static/img/general/tr-flag.jpg" alt="flag-img" class="page-lang__flag">
-                        <span class="page-lang__lang-sign">tr</span>
-                    </li>
-                    <li class="page-lang__item">
-                        <img src="./static/img/general/de-flag.jpg" alt="flag-img" class="page-lang__flag">
-                        <span class="page-lang__lang-sign">de</span>
-                    </li>
-                </ul>
             </div>
         </header>
         <main class="main-page">
@@ -104,8 +107,8 @@
                 </div>
             </div>
             <div class="main-page__image-layout image-layout" id="image-layout">
-                <div class="image-layout__parallax-img" id="parallax-img"></div>
-                <div class="image-layout__fixed-img"></div>
+                <div class="image-layout__parallax-img" id="parallax-img-cards"></div>
+                <div class="image-layout__fixed-img" id="parallax-img-girl"></div>
             </div>
         </main>
         <footer class="footer">

@@ -439,6 +439,17 @@ table {
   z-index: 3;
 }
 
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
 .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,9 +469,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 31px;
   position: absolute;
-  bottom: 22%;
   right: 140px;
   font-family: BauhausBold, sans-serif;
 }
@@ -486,18 +495,24 @@ table {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 90px;
-  padding: 8px;
+  padding: 0 8px 1vh 8px;
   position: absolute;
-  top: 4px;
+  top: 0.55vh;
   right: 0;
   background-color: #333333;
 }
 
 .page-lang__checked-lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 47px;
   height: 31px;
   border-radius: 3px;
   cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-lang__toggle-button {
@@ -563,6 +578,10 @@ table {
   width: 47px;
   height: 31px;
   border-radius: 3px;
+  background-image: url("../img/general/kz-flag.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-lang__lang-sign {
@@ -586,11 +605,55 @@ table {
 }
 
 @media (max-width: 579px) {
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 139px;
+    height: 21px;
+    background-image: url("../img/general/mob/mob-main-logo.png");
+  }
+  .jackpot {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    top: 6vh;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  }
   .jackpot__count {
+    letter-spacing: 1px;
     font-size: 28px;
   }
   .jackpot__sign {
+    margin-left: 20px;
+    letter-spacing: 0.5px;
     font-size: 28px;
+  }
+  .page-lang {
+    max-width: 60px;
+    padding: 0 4px 0.5vh 4px;
+    top: 0.25vh;
+  }
+  .page-lang__checked-lang {
+    width: 32px;
+    height: 21px;
+  }
+  .page-lang__toggle-button {
+    width: 20px;
+    height: 20px;
+  }
+  .page-lang__list--active {
+    height: 153px;
+  }
+  .page-lang__flag {
+    width: 32px;
+    height: 21px;
+    background-image: url("../img/general/mob/mob-kz-flag.jpg");
+  }
+  .page-lang__lang-sign {
+    font-size: 16px;
   }
 }
 
@@ -598,8 +661,9 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 79vh;
+  width: 100vw;
+  height: 78vh;
+  overflow: hidden;
   background-image: url("../img/general/main-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -641,7 +705,6 @@ table {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 550px;
-  height: 397px;
   padding: 25px 30px;
   border: 3px solid transparent;
   -webkit-box-sizing: border-box;
@@ -750,7 +813,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   width: 450px;
-  height: 37%;
+  margin-top: 15%;
   position: relative;
   z-index: 1;
 }
@@ -765,10 +828,10 @@ table {
   background-size: contain;
 }
 
-.sign-up__animation--top {
-  top: 0;
-  -webkit-transform: rotate(-90deg) scale(1, -1);
-          transform: rotate(-90deg) scale(1, -1);
+.sign-up__animation--bottom {
+  top: 50px;
+  -webkit-transform: rotate(90deg) scale(1, -1);
+          transform: rotate(90deg) scale(1, -1);
 }
 
 .sign-up__animation--right {
@@ -777,10 +840,10 @@ table {
           transform: rotate(0deg) scale(1, -1);
 }
 
-.sign-up__animation--bottom {
-  bottom: 0;
-  -webkit-transform: rotate(90deg) scale(1, -1);
-          transform: rotate(90deg) scale(1, -1);
+.sign-up__animation--top {
+  bottom: 50px;
+  -webkit-transform: rotate(270deg) scale(1, -1);
+          transform: rotate(270deg) scale(1, -1);
 }
 
 .sign-up__animation--left {
@@ -824,7 +887,7 @@ table {
 }
 
 .image-layout__parallax-img {
-  width: 557px;
+  width: 470px;
   height: 79vh;
   position: absolute;
   background-image: url("../img/general/cards_chips.png");
@@ -834,7 +897,7 @@ table {
 }
 
 .image-layout__fixed-img {
-  width: 557px;
+  width: 470px;
   height: 79vh;
   position: absolute;
   top: 50px;
@@ -848,8 +911,14 @@ table {
   .main-page__animal-img {
     display: none;
   }
+  .main-page__description-wrap {
+    left: 15%;
+  }
   .image-layout {
-    right: 57%;
+    right: 47%;
+  }
+  .sign-up {
+    margin-top: 8%;
   }
 }
 
@@ -867,42 +936,101 @@ table {
     left: 0;
   }
   .description {
-    width: 100%;
+    width: 100vw;
   }
   .image-layout {
     width: 100vw;
+    right: 0;
   }
   .image-layout__parallax-img {
     width: 100%;
-    left: 72%;
+    left: 0;
   }
   .image-layout__fixed-img {
     width: 100%;
-    left: 72%;
+    left: 0;
   }
 }
 
 @media (max-width: 579px) {
   .description {
-    height: 47vh;
+    padding: 10px;
+  }
+  .description__border-figure {
+    background-image: url("../img/general/mob/mob-description-border-figure.png");
   }
   .description__title {
-    font-size: 30px;
+    line-height: 28px;
+    font-size: 26px;
   }
   .description__main-text {
-    font-size: 20px;
+    line-height: 22px;
+    font-size: 18px;
   }
   .description__main-text--yellow-bigger-text {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  .description__text {
+    line-height: 14px;
+    font-size: 10px;
+  }
+  .sign-up {
+    max-width: 100vw;
+    bottom: 0;
+    margin-top: 3%;
   }
   .sign-up__animation {
     background-image: url("../img/general/button-animation-static.png");
   }
+  .sign-up__button {
+    width: 146px;
+    height: 46px;
+    font-size: 20px;
+  }
+  .image-layout {
+    top: 0;
+  }
+  .image-layout__parallax-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .image-layout__fixed-img {
+    background-position: 35% -25%;
+    background-size: 115%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .sign-up__animation--bottom {
+    top: 50px;
+    right: 160px;
+    -webkit-transform: rotate(90deg) scale(1, -1);
+            transform: rotate(90deg) scale(1, -1);
+  }
+  .sign-up__animation--right {
+    right: 0;
+    bottom: -20px;
+    -webkit-transform: rotate(0deg) scale(1, -1);
+            transform: rotate(0deg) scale(1, -1);
+  }
+  .sign-up__animation--top {
+    bottom: 50px;
+    left: 150px;
+    -webkit-transform: rotate(270deg) scale(1, -1);
+            transform: rotate(270deg) scale(1, -1);
+  }
+  .sign-up__animation--left {
+    left: 0;
+    bottom: -32px;
+    -webkit-transform: rotate(180deg) scale(1, -1);
+            transform: rotate(180deg) scale(1, -1);
+  }
 }
 
 .footer {
-  width: 100%;
-  height: 15vh;
+  width: 100vw;
+  height: 16vh;
   position: relative;
   background-color: #333333;
   background-image: url("../img/general/footer-background.png");
@@ -910,4 +1038,10 @@ table {
   background-repeat: no-repeat;
   background-size: auto;
   z-index: 2;
+}
+
+@media (max-width: 579px) {
+  .footer {
+    background-image: url("../img/general/mob/mob-footer-background.png");
+  }
 }
